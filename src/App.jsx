@@ -35,7 +35,7 @@ function App() {
   return (
   <div>
       <h2>PhilNITS Reviewer Randomizer</h2>
-      <form method={"post"} target="_blank" action={`/pdf/${link}#search=Q${question}`}>
+      <form method={"post"} target="_blank" action={`/pdf/${link}`}>
           <select name="year" id="year" onChange={e => setYear(e.target.value)}>
               <option value="2007">2007</option>
               <option value="2008">2008</option>
