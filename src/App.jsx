@@ -36,6 +36,10 @@ function App() {
         window.open(`/pdf/${link}`, '_blank')
     }
 
+    const goToAnswer = () => {
+        window.open(`/pdf/${year}${month}_FE_${set}_Answers.pdf`, '_blank')
+    }
+
   return (
   <div>
       <h2>PhilNITS Reviewer Randomizer</h2>
@@ -75,7 +79,8 @@ function App() {
 
           <br/>
           <button type={"button"} onClick={setRandom}>Randomize</button>
-          <button onClick={goToReviewer}>Open Reviewer</button>
+          <button type={"button"} onClick={goToReviewer}>Open Reviewer</button>
+          <button type={"button"} onClick={goToAnswer}>Check Answer Key</button>
       </form>
   </div>
   )
