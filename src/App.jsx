@@ -32,10 +32,14 @@ function App() {
         document.getElementById("question").value = randQuestion;
     }
 
+    const goToQuestion = () => {
+        window.open(`/pdf/${link}`, '_blank')
+    }
+
   return (
   <div>
       <h2>PhilNITS Reviewer Randomizer</h2>
-      <form method={"post"} target="_blank" action={`/pdf/${link}`}>
+      <form>
           <select name="year" id="year" onChange={e => setYear(e.target.value)}>
               <option value="2007">2007</option>
               <option value="2008">2008</option>
@@ -71,7 +75,7 @@ function App() {
 
           <br/>
           <button type={"button"} onClick={setRandom}>Randomize</button>
-          <button type={"submit"}>Open Reviewer</button>
+          <button onClick={goToQuestion}>Open Reviewer</button>
       </form>
   </div>
   )
