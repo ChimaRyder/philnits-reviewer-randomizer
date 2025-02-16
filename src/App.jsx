@@ -32,7 +32,7 @@ function App() {
         document.getElementById("question").value = randQuestion;
     }
 
-    const goToQuestion = () => {
+    const goToReviewer = () => {
         window.open(`/pdf/${link}`, '_blank')
     }
 
@@ -75,7 +75,7 @@ function App() {
 
           <br/>
           <button type={"button"} onClick={setRandom}>Randomize</button>
-          <button onClick={goToQuestion}>Open Reviewer</button>
+          <button onClick={goToReviewer}>Open Reviewer</button>
       </form>
   </div>
   )
